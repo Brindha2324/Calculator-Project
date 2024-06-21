@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="display">
+            <input type="text" id="result" readonly>
+        </div>
+        <div class="modes">
+            <button onclick="setMode('standard')">Standard</button>
+            <button onclick="setMode('scientific')">Scientific</button>
+            <button onclick="setMode('programmer')">Programmer</button>
+        </div>
+        <div class="buttons">
+            <!-- Standard Buttons -->
+            <div class="standard-mode">
+                <button data-action="7">7</button>
+                <button data-action="8">8</button>
+                <button data-action="9">9</button>
+                <button data-action="/">/</button>
+                <button data-action="4">4</button>
+                <button data-action="5">5</button>
+                <button data-action="6">6</button>
+                <button data-action="*">*</button>
+                <button data-action="1">1</button>
+                <button data-action="2">2</button>
+                <button data-action="3">3</button>
+                <button data-action="-">-</button>
+                <button data-action="0">0</button>
+                <button data-action=".">.</button>
+                <button data-action="calculate">=</button>
+                <button data-action="+">+</button>
+                <button data-action="clear">C</button>
+            </div>
+            <!-- Scientific Buttons -->
+            <div class="scientific-mode" style="display:none;">
+                <button data-action="Math.sin(">sin</button>
+                <button data-action="Math.cos(">cos</button>
+                <button data-action="Math.tan(">tan</button>
+                <button data-action="Math.log(">log</button>
+                <button data-action="Math.sqrt(">√</button>
+                <button data-action="Math.pow(,2)">x²</button>
+                <button data-action="Math.pow(,3)">x³</button>
+                <button data-action="Math.exp(">eˣ</button>
+                <button data-action="Math.PI">π</button>
+                <button data-action="Math.E">e</button>
+                <button data-action="(">(</button>
+                <button data-action=")">)</button>
+                <button data-action="+">+</button>
+                <button data-action="-">-</button>
+                <button data-action="*">*</button>
+                <button data-action="/">/</button>
+                <button data-action="0">0</button>
+                <button data-action="1">1</button>
+                <button data-action="2">2</button>
+                <button data-action="3">3</button>
+                <button data-action="4">4</button>
+                <button data-action="5">5</button>
+                <button data-action="6">6</button>
+                <button data-action="7">7</button>
+                <button data-action="8">8</button>
+                <button data-action="9">9</button>
+                <button data-action="calculate">=</button>
+                <button data-action="clear">C</button>
+            </div>
+            <!-- Programmer Buttons -->
+            <div class="programmer-mode" style="display:none;">
+                <button data-action="&">AND</button>
+                <button data-action="|">OR</button>
+                <button data-action="^">XOR</button>
+                <button data-action="~">NOT</button>
+                <button data-action="<<"><<</button>
+                <button data-action=">>">>></button>
+                <button data-action="+">+</button>
+                <button data-action="-">-</button>
+                <button data-action="*">*</button>
+                <button data-action="/">/</button>
+                <button data-action="0">0</button>
+                <button data-action="1">1</button>
+                <button data-action="2">2</button>
+                <button data-action="3">3</button>
+                <button data-action="4">4</button>
+                <button data-action="5">5</button>
+                <button data-action="6">6</button>
+                <button data-action="7">7</button>
+                <button data-action="8">8</button>
+                <button data-action="9">9</button>
+                <button data-action="calculate">=</button>
+                <button data-action="clear">C</button>
+            </div>
+        </div>
+    </div>
+    <div class="history">
+        <h3>History</h3>
+        <div id="historyList" class="history-list"></div>
+        <button onclick="clearHistory()">Clear History</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
